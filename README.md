@@ -14,7 +14,7 @@ Este repositorio contiene el material para el [M&oacute;dulo de An&aacute;lisis 
 Este módulo de nivel básico-intermedio te proporcionará una sólida base de conocimientos teóricos y prácticos sobre aspectos fundamentales de biocómputo para inferencia filogenética, evolución molecular y genómica microbiana, con énfasis en análisis pangenómicos y filogenómicos.
 
 ### Descripción
-El módulo consta de sesiones teóricas y prácticas que cubrirán aspectos básicos del tópico como:
+El módulo consta de sesiones teóricas y prácticas impartidas vía zoom, que cubrirán aspectos básicos del tópico como:
 
 - escrutinio de bases de datos mediante BLAST
 - determinación e interpretación de homología
@@ -60,7 +60,7 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 
 ## <b>Sesiones y material asociado</b>
 
-### Jueves 14 de octubre
+### Jueves 14 de octubre 2021
 
 #### <b>Sesión 1: Conceptos básicos de biología evolutiva, filogenética y (pan)genómica microbiana</b>
 - [presentaci&oacute;n - PDF: conceptos básicos de filogenética y evolución](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema1_conceptos_basicos_filo_y_evol/tema1_conceptos_basicos_filogenetica_y_evol.pdf)
@@ -86,21 +86,21 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
   - [blast-imager.pl](https://github.com/vinuesa/intro-filoinfo_UAS/tree/master/docs/tema2_BLAST/data/blast-imager.pl)
 - Lecturas recomendadas
   - Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL. [BLAST+: architecture and applications. BMC Bioinformatics. 2009 Dec 15;10:421](https://www.ncbi.nlm.nih.gov/pubmed/20003500)
+  - Galperin MY, Kristensen DM, Makarova KS, Wolf YI, Koonin EV.[Microbial genome analysis: the COG approach. Brief Bioinform. 2019 Jul 19;20(4):1063-1070. doi: 10.1093/bib/bbx117](https://pubmed.ncbi.nlm.nih.gov/28968633/)
   - Hu G, Kurgan L. Sequence Similarity Searching. [Curr Protoc Protein Sci. 2019 Feb;95(1):e71. doi: 10.1002/cpps.71](https://www.ncbi.nlm.nih.gov/pubmed/30102464)
+  - Kristensen DM, Wolf YI, Mushegian AR, Koonin EV. [Computational methods for Gene Orthology inference. Brief Bioinform. 2011 Sep;12(5):379-91. doi: 10.1093/bib/bbr030](https://pubmed.ncbi.nlm.nih.gov/21690100/)
+ 
+### Viernes 15 de octubre 2021
 
-
-<!-- 
-
-#### <b>Sesión 4: Alineamientos múltiples (teoría y prácticas)</b>
-- [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion4_alineamientos/Tema4_alineamientos_multiples.pdf)
+#### <b>Sesión 3: Alineamientos múltiples (teoría y prácticas)</b>
+- [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/Tema3_alineamientos_multiples.pdf)
 - práctica
-  - [comandos, txt](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion4_alineamientos/practicas_aln_multiples_clustal.cmds)
-  - [sequences, tgz](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion4_alineamientos/sequences_for_alingment.tgz)
-  - [align_seqs_with_clustal_or_muscle.sh](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/align_seqs_with_clustal_or_muscle.sh)
-  - [convert_alnFormats_using_clustalw.sh](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/convert_alnFormats_using_clustalw.sh)
-  - [convert_aln_format_batch_bp.pl](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/convert_aln_format_batch_bp.pl)
-  - [translate_fastas.pl](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/translate_fastas.pl)
-  - [prot2cdnAlns.pl](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/prot2cdnAlns.pl)
+  - [comandos, txt](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/practicas_aln_multiples_clustal.cmds)
+  - [sequences, tgz](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/sequences_for_alingment.tgz)
+  - [align_seqs_with_clustal_or_muscle.sh](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/align_seqs_with_clustal_or_muscle.sh)
+  - [convert_alnFormats_using_clustalw.sh](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/convert_alnFormats_using_clustalw.sh)
+  - [convert_aln_format_batch_bp.pl](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/convert_aln_format_batch_bp.pl)
+  - [prot2cdnAlns.pl](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/prot2cdnAlns.pl)<<>>
 - Lecturas recomendadas
   - Simossis V, Kleinjung J, Heringa J. An overview of multiple sequence alignment. [Curr Protoc Bioinformatics. 2003 Nov;Chapter 3:Unit 3.7](https://www.ncbi.nlm.nih.gov/pubmed/18428699)
   - Sievers F, Wilm A, Dineen D, Gibson TJ, Karplus K, Li W, Lopez R, McWilliam H, Remmert M, Söding J, Thompson JD, Higgins DG. Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega. [Mol Syst Biol. 2011 Oct 11;7:539](https://www.ncbi.nlm.nih.gov/pubmed/21988835)
@@ -109,6 +109,9 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 
 ***
 
+En construcción ...
+
+<!-- 
 ### Miércoles 31 de Julio
 
 #### <b>Sesión 5: Introducción a los métodos filogenéticos, modelos de sustitución y algoritmos de búsqueda de árboles</b>
