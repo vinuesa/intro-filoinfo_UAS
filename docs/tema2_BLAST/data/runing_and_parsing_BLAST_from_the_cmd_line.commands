@@ -1,12 +1,17 @@
 ## >>> TIB2019-T3, CCG-UNAM: 29 Jul - 2 Ago 2019 <<<
-## NOTES: V6, July 26th, 2019
-## Author: Pablo Vinuesa, CCG-UNAM, Mexico
-## http://www.ccg.unam.mx~/vinuesa/
-## https://github.com/vinuesa/TIB-filoinfo
+## NOTES: V8, Oct 9, 2021. Adapted for Diplomado en Bioinformatica - UAS 
+## http://econtinua.uas.edu.mx/diplomados/2510-2700-18_001.htm
+## https://github.com/vinuesa/intro-filoinfo_UAS
 
+## Author: Pablo Vinuesa, CCG-UNAM, Mexico; @pvinmex
+## https://www.ccg.unam.mx~/vinuesa/
+
+## RELATED SOURCES: 
+## https://github.com/vinuesa/TIB-filoinfo
+## https://github.com/vinuesa/intro2linux
 #====================================================================================
 # Tutorial: running blastall and blast+ from the command line
-# AIM: teach the use of NCBI legacy-blast and blast+ from the command line along with
+# AIM: teach the use of NCBI [legacy-blast and] blast+ from the command line along with
 #      useful shell idioms and 1liners to effectively run blast and parse results
 #
 # This tutorial expects that the user has a Unix/Linux environment with the standard
@@ -20,22 +25,17 @@
 
 
 #====================================================================================
-#>>> PRELIMINARIES:
+#>>> PRELIMINARIES: (running on buluc)
 #====================================================================================
 # i) download or copy the sequence data to your working directories for this practice
-cd && [ ! -d TIB2019-T3 ] && TIB2019-T3
 
-cd TIB2019-T3
-
-mkdir sesion3_BLAST && cd sesion3_BLAST
+mkdir BLAST_practice && cd  BLAST_practice
 
 # ii) Lets generate two subdirectories
 mkdir BLAST_DB_AA BLAST_DB_NT
 
 # iii) lets save the path to our parental working directory in a variable
 wkdir=$(pwd)
-
-cp /space31/PIG/vinuesa/TIB2019-T3/sesion3_BLAST/data/*tgz .
 
 # lets see the contents of the variable $wkdir
 echo $wkdir
@@ -47,9 +47,9 @@ mv gene_discovery_and_annotation_using_blastx.tgz BLAST_DB_AA
 #-------------------------------------------------------------------------------------
 
 
-#************************************
-#>>>> LEGACY BLAST (blastall) <<<<< #
-#************************************
+#***************************************************************
+#>>>> [LEGACY BLAST (blastall)]  blast+ with nucleotides <<<<< #
+#***************************************************************
 
 
 #==============================================================================
@@ -60,7 +60,7 @@ mv gene_discovery_and_annotation_using_blastx.tgz BLAST_DB_AA
 # Reference sequences to build a blastn-searchable DB: 6S_seqs4_blastDB.fna
 #
 # We will also explore each of these files using standard shell filtering tools
-# and modify the FASTA headers to make them suitable for blastdb indexing
+# and modify the FASTA headers to make them suitable for formatdb|makeblastdb indexing
 #==============================================================================
 
 # Lets move into the directory holding the nucleotide sequences
@@ -86,63 +86,68 @@ perl -pe 'if( /^>/ ){ $c++; s/>/>gnl|16S_DB|$c / }' 16S_seqs4_blastDB.fna | grep
 perl -pe 'if( /^>/ ){ $c++; s/>/>gnl|16S_DB|$c / }' 16S_seqs4_blastDB.fna > 16S_seqs4_blastDB.fnaed
 
 ## 2) run formatdb, generating an indexed DB
-formatdb -i 16S_seqs4_blastDB.fnaed -p F -o T
-132.248.220.35
+#formatdb -i 16S_seqs4_blastDB.fnaed -p F -o T
+makeblastdb -in 16S_seqs4_blastDB.fnaed -dbtype nucl -parse_seqids
+
 # 2.1) run blastn (blastall -p blastn), and get only the best hit (-b 1) in tabular format (-m 8).
-blastall -p blastn -i 16S_problema.fna -b 1 -a 6 -d 16S_seqs4_blastDB.fnaed -m 8
-blastall -p blastn -i 16S_problema.fna -b 1 -a 6 -d 16S_seqs4_blastDB.fnaed -m 8 > 16S_problema_blastN_b1_m8.tab
+# blastall -p blastn -i 16S_problema.fna -b 1 -a 6 -d 16S_seqs4_blastDB.fnaed -m 8 > 16S_problema_blastN_b1_m8.tab
+blastn -query 16S_problema.fna -db 16S_seqs4_blastDB.fnaed -outfmt 6 -num_alignments 1 > 16S_problema_blastN_maln1_m6.tab
 
 # 2.2) explore the table structure
-head 16S_problema_blastN_b1_m8.tab
+head 16S_problema_blastN_maln1_m6.tab
 
 # 2.3) how many unique hits are there?
-cut -f 2 16S_problema_blastN_b1_m8.tab | sort | uniq -c
+cut -f 2 16S_problema_blastN_maln1_m6.tab | sort | uniq -c
 
 # 3) retrieve all hits from the db using fastacmd
-cut -f2 16S_problema_blastN_b1_m8.tab  > IDs4fastacmd.txt
-fastacmd -i IDs4fastacmd.txt -d 16S_seqs4_blastDB.fnaed |grep '>' |cut -d\| -f3 | cut -d' ' -f2 > hit_sequences_b1.fna
+cut -f2 16S_problema_blastN_maln1_m6.tab  > IDs4fastacmd.txt
+
+#blastdbcmd -i IDs4fastacmd.txt -d 16S_seqs4_blastDB.fnaed | grep '>' |cut -d\| -f3 | cut -d' ' -f2 > hit_sequences_b1.fna
+blastdbcmd -entry_batch IDs4fastacmd.txt -db 16S_seqs4_blastDB.fnaed > best-hit_sequences.fna
 
 # 3.1) lets generate a list of the hits from the fasta headers
-grep '>' hit_sequences_b1.fna | cut -d' ' -f2 > hit_sequence_headers.txt
+grep '>' best-hit_sequences.fna | cut -d' ' -f2 > hit_sequence_headers.txt
 
 # 4) Lets classify our query sequences, based on the subject headers of each best hit, using a simple tabular output format
-cut -f1 16S_problema_blastN_b1_m8.tab > problem_seqs.txt
+cut -f1 16S_problema_blastN_maln1_m6.tab > problem_seqs.txt
 paste problem_seqs.txt hit_sequence_headers.txt > classified_16S_problema_sequences.tab
 
+cat classified_16S_problema_sequences.tab
 
-#==================================================================================================
-#>>> EXERCISE 2: get the 10 best hits and filter out only those with >= 98.5% sequence identity <<<
-#==================================================================================================
+#=================================================================================================================================
+# >>> EXERCISE 2: get the 10 best hits and filter out only those with >= 98.5% sequence identity and > 1000 alingment length <<< #
+#=================================================================================================================================
 
-blastall -p blastn -i 16S_problema.fna -b 10 -a 6 -d 16S_seqs4_blastDB.fnaed -m 8 > 16S_problema_blastN_b10_m8.tab
+blastn -query 16S_problema.fna -db 16S_seqs4_blastDB.fnaed -num_alignments 10 -outfmt 6 > 16S_problema_blastN_10hits.tab
+wc -l 16S_problema_blastN_10hits.tab
+
 
 # The simplest way to parse a table on the command line is using AWK:
-# see this nice and complete AWK tutorial: http://www.grymoire.com/Unix/Awk.html
-awk '$3 > 98.5 && $4 > 1000' 16S_problema_blastN_b10_m8.tab | cut -f1,2
-awk 'BEGIN{OFS="\t"} $3 > 98.5 && $4 > 1000 {print $1, $2}' 16S_problema_blastN_b10_m8.tab
+# see complete GNU/Linux and awk tutorial: https://github.com/vinuesa/intro2linux
+awk 'BEGIN{OFS="\t"} $3 > 98.5 && $4 > 1000 {print $1, $2}' 16S_problema_blastN_10hits.tab | wc -l
+awk 'BEGIN{OFS="\t"} $3 > 98.5 && $4 > 1000 {print $1, $2}' 16S_problema_blastN_10hits.tab | less
 
-#perl -ne '@f = split /\t/; print if $f[2] >= 98.5' 16S_problema_blastN_b10_m8.tab | less
+#perl -ne '@f = split /\t/; print if $f[2] >= 98.5' 16S_problema_blastN_10hits.tab| less
 # like above, but imposing also aln len > 1000 with implicit split -ane
-#perl -ane '{print "$F[0]\tF[1]" if $F[2] > 98.5 && $F[3] > 1000 }' 16S_problema_blastN_b10_m8.tab
-
+#perl -ane '{print "$F[0]\tF[1]" if $F[2] > 98.5 && $F[3] > 1000 }' 16S_problema_blastN_10hits.tab
 
 
 #============================
 #>>> EXERCISE 3: HOMEWORK <<<
 #============================
 
-# 1. Repeat EXERCISES 1 and 2 above, but using blast+ commands!
-
-# 2. If you are still feeling uneasy with the Bash shell and the UNIX/Linux environment,
-#     please study the Linux tutorials provided in the tutoriales/ directory
+# 1. If you are still feeling uneasy with the Bash shell and the UNIX/Linux environment,
+#     please study the Linux tutorial in https://github.com/vinuesa/intro2linux
+# 2. Make a list of all unique Mycobacterium sequence hit IDs with >= 97% identity and > 1000 nucleotides
+#       and retrieve the fasta sequences from the DB
 
 # ====================================================================================
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LEGACY BLAST~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   END BLASTN      <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 # ====================================================================================
 
-#****************
-#>>>> BLAST+ <<<<
-#****************
+#******************************
+#>>>> BLAST+ with proteins <<<<
+#******************************
 
 #=====================================================================================
 #>>> PRELIMINARIES:
@@ -239,7 +244,7 @@ blastp -query unknown_prot.faa -db integron_cassettes4blastdb.faaED -outfmt '6 q
 cat header1.tab blastp_tophits.out > blastp_tophits.tsv
 
 # get the sseqids only for the top hits with % sequence identity >= 95 and query coverage >= 97%
-awk 'BEGIN{FS="\t"; OFS="\t"} $7 >= 95 && $13 >= 97' blastp_tophits.tsv | cut -f2 | grep -v '^sseqid' > sseqids_for_top_hits_with_ge95pident_ge97qcovs.list
+awk 'BEGIN{FS="\t"; OFS="\t"} NR > 1 && $7 >= 95 && $13 >= 97' blastp_tophits.tsv | cut -f2  > sseqids_for_top_hits_with_ge95pident_ge97qcovs.list
 
 # finally retrieve the sequences for the sseqids_for_top_hits_with_ge95pident_ge97qcovs.list from the integron_cassettes4blastdb
 blastdbcmd -db integron_cassettes4blastdb.faaED -entry_batch sseqids_for_top_hits_with_ge95pident_ge97qcovs.list -dbtype prot -out top_hits_with_ge95pident_ge97qcovs.faa
@@ -282,6 +287,7 @@ head 3blastX_hits_m6_header1.tab
 #    for each sequence and adding the stitle column to the output table
 
 echo -e 'qseqid\tsseqid\tstitle\tqlen\tslen\tqstart\tqend\tsstart\tsend\tlength\tpident\tpositive\tmismatch\tgaps\tevalue\tbitscore\tqcovs\tqframe' > header2.tab
+
 blastx -query 3cass_amplicons.fna -db integron_cassettes4blastdb.faaED -evalue 1e-10 -outfmt '6 qseqid sseqid stitle qlen slen qstart qend sstart send length pident positive mismatch gaps evalue bitscore qcovs qframe' -num_alignments 100 -out 100blastX_hits_m6_header2.tab
 
 [ -s 100blastX_hits_m6_header2.tab ] && cat header2.tab 100blastX_hits_m6_header2.tab > ed && mv ed 100blastX_hits_m6_header2.tab
@@ -293,9 +299,9 @@ head -1 100blastX_hits_m6_header2.tab | sed 's/\t/\n/g' | cat -n
 
 #>>> This 1liner generates a non-redundant list of the qstart qend positions for each of the query sequences. 
 #    These are extracted from the full table with $(cut -f1 100blastX_hits_m6_header2.tab | grep -v qseqid | sort -u)
-#    Then, for each query, we grep them out of the table with grep $query 100blastX_hits_m6_header2.tab and keep only the fields 6,7, qstart, qend
+#    Then, for each query, grep it out of the table with grep $query 100blastX_hits_m6_header2.tab and keep only the fields 6,7: qstart, qend
 #    We separte and label the results corresponding to each query sequence using the echo "#>>> $query"; as header 
-#    and end the corresponding rerport with echo '------------------------';
+#    End the corresponding rerport with echo '------------------------';
 for query in $(cut -f1 100blastX_hits_m6_header2.tab | grep -v qseqid | sort -u)
 do 
      echo "#>>> $query"; grep $query 100blastX_hits_m6_header2.tab | cut -f6,7 | sort -u
@@ -318,14 +324,14 @@ grep Am1 100blastX_hits_m6_header2.tab | cut -f7 | sort -u | sort -nrk1
 #>>> Lets explore this in more detail. We'll start with the Am1 query
 #    One class of hits seems to start at position 3, ending at around position 500
 #    What are the hits? Lets grep them out of the table; 
-#    note the use of a regular expression '3[[:scpace:]]500' which denotes a 3 followed by a space or tab, 
+#    note the use of a regular expression '3[[:space:]]500' which denotes a 3 followed by a space or tab, 
 #    followed by a 500 (i.e. our qstart qend coordinates)
 grep Am1 100blastX_hits_m6_header2.tab | grep '3[[:space:]]500'
 
 #>>> lets retrieve the best hit gnl|casseteDB|10444105 found by the search in the previous step
 blastdbcmd -db integron_cassettes4blastdb.faaED -entry 'gnl|casseteDB|10444105' -dbtype prot -out S_marcescens_dhrXII_casseteDB-10444105.faa
 
-#>>> lets retrieve all hits found by the search in the previous step for the Am1 gene starting at around pos 899 and ending at pos 1699
+#>>> lets retrieve all hits found by the search in the previous step for the Am1 gene starting at pos 899 and ending at pos 1699
 grep Am1 100blastX_hits_m6_header2.tab | grep '899[[:space:]]1699'
 grep Am1 100blastX_hits_m6_header2.tab | grep '899[[:space:]]1699'  | cut -f2 > Am1_qs899_qe1699_hit_IDs.list
 blastdbcmd -db integron_cassettes4blastdb.faaED -entry_batch Am1_qs899_qe1699_hit_IDs.list -dbtype prot -out Am1_qs899_qe1699_AadA_best_hits.faa
@@ -335,15 +341,124 @@ blastdbcmd -db integron_cassettes4blastdb.faaED -entry_batch Am1_qs899_qe1699_hi
 #    This, as you will agree, is very convenient when we have large lits of hits 
 #    matching on different parts of our query sequence, exactly our case:
 
-# lets split the multifasta into the individual souce sequence files, 
+# lets split the multifasta into the individual soruce sequence files, 
 # that is, generate single fasta files from the multifasta source file
 split_fasta.pl 3cass_amplicons.fna
 
 # and now we can run the script
 # i) first writing the tables to file
-#for file in *fa; do blastx -query $file -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 -out ${file%.fa}_blastxout.tab; blast-imager.pl ${file%.fa}_blastxout.tab > #${file%.*}.png; rm ${file%.fa}_blastxout.tab; done
+#for file in *fa
+#do 
+#   blastx -query $file -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 -out ${file%.fa}_blastxout.tab; 
+#   ./blast-imager.pl ${file%.fa}_blastxout.tab > ${file%.*}.png
+#   rm ${file%.fa}_blastxout.tab
+#done
 
 # ii) or directly to the graph, by piping the blastx oputput directly into the blast-imager script like so:
-for file in *fa; do blastx -query $file -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 | blast-imager.pl > ${file%.*}.png; done
+#for file in *fa; do blastx -query $file -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 | ./blast-imager.pl > ${file%.*}.png; done
+
+# Let's run again, imposing some filtering to remove the poorest hits: pident > 98%; mismatches < 4; gaps < 3 
+# which will render a better figure
+for file in *fa; do blastx -query $file -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 | awk '$3 > 98 && $5 < 4 && $6 < 3' | ../../blast-imager.pl > ${file%.*}.png; done
+
+# now lets have a look at the results for the Am1 sequence
+eog Am1.png &
 
 
+# how many possible CDSs do you recognize?
+# I'd say 3
+
+# write a table with the possible coordinates (at DNA level; see upper coordinate lines)
+#start	end	strand	Notes
+3	500	+	-
+612	902	+	The 887 and 899 starts would overlap with the first gene; this is not typical for gene cassettes
+908	1699	+	-	
+
+# Retrieve the genes and check for possible start and end condons
+# 1st gene
+awk -f ../../extract_sequence_strings_by_coords.awk start=3 end=500 Am1.fa
+awk -f ../../extract_sequence_strings_by_coords.awk start=3 end=500 Am1.fa > Am1_CDSs.fna
+
+# 2cnd gene
+awk -f ../../extract_sequence_strings_by_coords.awk start=612 end=902 Am1.fa
+awk -f ../../extract_sequence_strings_by_coords.awk start=612 end=902 Am1.fa >> Am1_CDSs.fna
+
+# 3rd gene
+awk -f ../../extract_sequence_strings_by_coords.awk start=887 end=1699 Am1.fa # no ATG, GTG or TTG start codons
+awk -f ../../extract_sequence_strings_by_coords.awk start=899 end=1699 Am1.fa # no ATG, GTG or TTG start codons
+awk -f ../../extract_sequence_strings_by_coords.awk start=908 end=1699 Am1.fa # canonical ATG start; looks ok
+awk -f ../../extract_sequence_strings_by_coords.awk start=908 end=1699 Am1.fa >> Am1_CDSs.fna
+
+grep '^>' Am1_CDSs.fna
+
+# we need to add consecutive ORF/gene names to distinguish them from one another
+perl -pe 'if(/^>(\S+)/){ $c++; $h=$1 . "_ORF" . $c; s/$1/$h/ }' Am1_CDSs.fna
+perl -pe 'if(/^>(\S+)/){ $c++; $h=$1 . "_ORF" . $c; s/$1/$h/ }' Am1_CDSs.fna > ed && mv ed Am1_CDSs.fna
+
+# Finally, let's translate the CDSs to their conceptual translation products using the universal genetic code 
+#  with the help of translate_fasta.awk
+../../translate_fasta.awk Am1_CDSs.fna
+../../translate_fasta.awk Am1_CDSs.fna > Am1_CDSs_translations.faa
+
+## Assign functional annotations to the 3 CDSs
+# 1. run blastp with the translated products and get 10 top hits
+echo -e 'qseqid\tsseqid\tqlen\tslen\tstitle\tlength\tpident\tpositive\tmismatch\tgaps\tevalue\tbitscore\tqcovs' > header1.tab
+blastp -query Am1_CDSs_translations.faa -db integron_cassettes4blastdb.faaED -outfmt '6 qseqid sseqid qlen slen stitle length pident positive mismatch gaps evalue bitscore qcovs' -num_alignments 10 > blastp_10hits.out
+
+cat header1.tab blastp_10hits.out > ed && mv ed blastp_10hits.out
+
+# 2. reduce the output table to relevant fields for easier visualization
+sed 's/\t/\n/g' header1.tab | cat -n
+
+awk 'BEGIN{FS="\t"; OFS=","}{print $1,$3,$4,$5,$7,$12,$13}' blastp_10hits.out | sed 's#||||##g'
+
+
+
+eog Ap18.png &
+
+awk -f ../../extract_sequence_strings_by_coords.awk start=657 end=1045 Ap18.fa
+awk -f ../../extract_sequence_strings_by_coords.awk start=657 end=1045 Ap18.fa > Ap18_check_region.fas
+
+file=Ap18_check_region.fas
+blastx -query $file -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 | awk '$3 > 80 && $5 < 15 && $6 < 3' | ../../blast-imager.pl > ${file%.*}.png
+
+
+### TBLASTN
+# As we have seen blastx will search your DNA sequence tranlated in all 6 reading frames against a protein database 
+#   while tblastn will search in a nucleotide database with a protein input. The DNA DB in this case is translated in all 6 frames
+blastx -query Ap18_check_region.fas -db integron_cassettes4blastdb.faaED -evalue 1e-20 -outfmt 6 -num_alignments 100 | awk '$3 > 80 && $5 < 15 && $6 < 3' | awk 'NR == 1 {print $2}'
+
+blastdbcmd -db integron_cassettes4blastdb.faaED -entry 'casseteDB:51011758' -dbtype prot > Ap18_check_region_UNKNOWN_ORF_HIT.faa
+
+makeblastdb -in Ap18.fa -dbtype nucl
+
+tblastn -query Ap18_check_region_UNKNOWN_ORF_HIT.faa -db Ap18.fa -outfmt 6
+tblastn -query Ap18_check_region_UNKNOWN_ORF_HIT.faa -db Ap18.fa -outfmt 6 | ../../blast-imager.pl > Ap18_check_region_UNKNOWN_ORF_HIT.png
+eog Ap18_check_region_UNKNOWN_ORF_HIT.png &
+
+# ok, starts with GTG, but no stop codon: TAG|UAG (ambar); TGA|UGA (opal); TAA|UAA (ochre)
+awk -f ../../extract_sequence_strings_by_coords.awk start=60 end=836 Ap18.fa
+awk -f ../../extract_sequence_strings_by_coords.awk start=60 end=846 Ap18.fa # lets increment by 10 nts
+awk -f ../../extract_sequence_strings_by_coords.awk start=60 end=842 Ap18.fa > Ap18_orf2.fna
+
+# verify the translation product
+../../translate_fasta.awk Ap18_orf2.fna
+../../translate_fasta.awk Ap18_orf2.fna > Ap18_orf2.faa;
+
+# Find the top 10 blastp hits for annotation
+blastp -query Ap18_orf2.faa -db integron_cassettes4blastdb.faaED -outfmt '6 qseqid sseqid qlen slen stitle length pident positive mismatch gaps evalue bitscore qcovs' -num_alignments 10 > Ap18_ORF2_blastp_10hits.out
+
+cat header1.tab Ap18_ORF2_blastp_10hits.out > ed && mv ed Ap18_ORF2_blastp_10hits.out
+
+
+### >>> TODO <<< ###
+# * re-write the whole blastx stuff as a tblastn search
+# * add a block describing the blast-imager.pl output
+# * use fasta_toolkit.awk
+
+# what do you think is potentially interesting about this output?
+awk 'BEGIN{FS="\t"; OFS=","}{print $1,$3,$4,$5,$7,$12,$13}' Ap18_ORF2_blastp_10hits.out 
+
+
+# HOMEWORK
+# Repeat|Complete the exercise with Ap18.fa and Ap26.fa
