@@ -1,0 +1,1 @@
+phyml  -i primate-mtDNA-interleaved1.phy -d nt -n 1 -b 5 -m 010020 -f e -c 4 -a e --no_memory_check -o tlr -s BEST 
