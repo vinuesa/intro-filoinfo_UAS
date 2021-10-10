@@ -63,7 +63,6 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 ### Jueves 14 de octubre
 
 #### <b>Sesión 1: Conceptos básicos de biología evolutiva, filogenética y (pan)genómica microbiana</b>
-<!-- - [presentaci&oacute;n - PDF: conceptos básicos de filogenética y evolución](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion2_conceptos_basicos/sesion2_conceptos_basicos_filogenetica_y_evol.pdf) -->
 - [presentaci&oacute;n - PDF: conceptos básicos de filogenética y evolución](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema1_conceptos_basicos_filo_y_evol/tema1_conceptos_basicos_filogenetica_y_evol.pdf)
 
 - Lecturas recomendadas
@@ -77,21 +76,20 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 
 ***
 
-<!-- 
-
-### Martes 30 de Julio
-
-#### <b>Sesión 3: Búsqueda de homólogos usando BLAST desde la línea de comandos (teoría y prácticas)</b>
-- [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion3_BLAST/Tema3_BLAST_OVERVIEW.pdf)
+#### <b>Sesión 2: Búsqueda de homólogos usando BLAST desde la línea de comandos (teoría y prácticas)</b>
+- [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema2_BLAST/Tema2_BLAST_OVERVIEW.pdf)
 - práctica
-  - [comandos, txt](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion3_BLAST/data/runing_and_parsing_BLAST_from_the_cmd_line.commands)
-  - [16S_4blastN.tgz](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion3_BLAST/data/16S_4blastN.tgz)
-  - [gene_discovery_and_annotation_using_blastx.tgz](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion3_BLAST/data/gene_discovery_and_annotation_using_blastx.tgz)
-  - [split_fasta.pl](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/split_fasta.pl)
-  - [blast-imager.pl](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/bin/blast-imager.pl)
+  - [comandos, txt](https://github.com/vinuesa/intro-filoinfo_UAS/tree/master/docs/tema2_BLAST/data/runing_and_parsing_BLAST_from_the_cmd_line.commands)
+  - [16S_4blastN.tgz](https://github.com/vinuesa/intro-filoinfo_UAS/tree/master/docs/tema2_BLAST/data/16S_4blastN.tgz)
+  - [gene_discovery_and_annotation_using_blastx.tgz](https://github.com/vinuesa/intro-filoinfo_UAS/tree/master/docs/tema2_BLAST/data/gene_discovery_and_annotation_using_blastx.tgz)
+  - [split_fasta.pl](https://github.com/vinuesa/intro-filoinfo_UAS/tree/master/docs/tema2_BLAST/data/split_fasta.pl)
+  - [blast-imager.pl](https://github.com/vinuesa/intro-filoinfo_UAS/tree/master/docs/tema2_BLAST/data/blast-imager.pl)
 - Lecturas recomendadas
   - Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL. [BLAST+: architecture and applications. BMC Bioinformatics. 2009 Dec 15;10:421](https://www.ncbi.nlm.nih.gov/pubmed/20003500)
   - Hu G, Kurgan L. Sequence Similarity Searching. [Curr Protoc Protein Sci. 2019 Feb;95(1):e71. doi: 10.1002/cpps.71](https://www.ncbi.nlm.nih.gov/pubmed/30102464)
+
+
+<!-- 
 
 #### <b>Sesión 4: Alineamientos múltiples (teoría y prácticas)</b>
 - [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion4_alineamientos/Tema4_alineamientos_multiples.pdf)
