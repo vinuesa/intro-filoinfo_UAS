@@ -90,6 +90,8 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
   - Hu G, Kurgan L. Sequence Similarity Searching. [Curr Protoc Protein Sci. 2019 Feb;95(1):e71. doi: 10.1002/cpps.71](https://www.ncbi.nlm.nih.gov/pubmed/30102464)
   - Kristensen DM, Wolf YI, Mushegian AR, Koonin EV. [Computational methods for Gene Orthology inference. Brief Bioinform. 2011 Sep;12(5):379-91. doi: 10.1093/bib/bbr030](https://pubmed.ncbi.nlm.nih.gov/21690100/)
  
+***
+
 ### Viernes 15 de octubre 2021
 
 #### <b>Sesión 3: Alineamientos múltiples (teoría y prácticas)</b>
@@ -100,21 +102,24 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
   - [align_seqs_with_clustal_or_muscle.sh](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/align_seqs_with_clustal_or_muscle.sh)
   - [convert_alnFormats_using_clustalw.sh](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/convert_alnFormats_using_clustalw.sh)
   - [convert_aln_format_batch_bp.pl](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/convert_aln_format_batch_bp.pl)
-  - [prot2cdnAlns.pl](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/prot2cdnAlns.pl)<<>>
+  - [prot2cdnAlns.pl](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema3_alineamientos/data/prot2cdnAlns.pl)
 - Lecturas recomendadas
   - Simossis V, Kleinjung J, Heringa J. An overview of multiple sequence alignment. [Curr Protoc Bioinformatics. 2003 Nov;Chapter 3:Unit 3.7](https://www.ncbi.nlm.nih.gov/pubmed/18428699)
   - Sievers F, Wilm A, Dineen D, Gibson TJ, Karplus K, Li W, Lopez R, McWilliam H, Remmert M, Söding J, Thompson JD, Higgins DG. Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega. [Mol Syst Biol. 2011 Oct 11;7:539](https://www.ncbi.nlm.nih.gov/pubmed/21988835)
   - Sievers F, Higgins DG. Clustal Omega for making accurate alignments of many protein sequences. [Protein Sci. 2018 Jan;27(1):135-145](https://www.ncbi.nlm.nih.gov/pubmed/28884485)
 
-
 ***
+
+### Miércoles 31 de Julio
+
+#### <b>Sesión 4: Introducción a los métodos filogenéticos, modelos de sustitución y algoritmos de búsqueda de árboles</b>
 
 En construcción ...
 
-<!-- 
-### Miércoles 31 de Julio
+***
 
-#### <b>Sesión 5: Introducción a los métodos filogenéticos, modelos de sustitución y algoritmos de búsqueda de árboles</b>
+<!-- 
+
 - [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion5_metodos_filogeneticos_y_modelos/Tema5_metodos_filogeneticos_y_modelos.pdf)
 - Lecturas recomendadas
   - Yang Z, Rannala B. Molecular phylogenetics: principles and practice. [Nat Rev Genet. 2012 Mar 28;13(5):303-14](https://www.ncbi.nlm.nih.gov/pubmed/22456349)
