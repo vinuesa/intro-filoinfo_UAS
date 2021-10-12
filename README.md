@@ -110,29 +110,33 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 
 ***
 
-### Sábado 16 de octubre de 2021
-
 #### <b>Sesión 4: Introducción a los métodos filogenéticos, modelos de sustitución y algoritmos de búsqueda de árboles</b>
 
 - [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema4_metodos_filogeneticos_y_modelos/tema4_metodos_filogeneticos_y_modelos.pdf)
 - Lecturas recomendadas
   - Yang Z, Rannala B. Molecular phylogenetics: principles and practice. [Nat Rev Genet. 2012 Mar 28;13(5):303-14](https://www.ncbi.nlm.nih.gov/pubmed/22456349)
 
-<!--
+***
+
+### Sábado 16 de octubre de 2021
 
 #### <b>Sesión 5: Selección de modelos e inferencia de filogenias bajo máxima verosimilitud (teoría y práctica)</b>
-- [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion6_maxima_verosimilitud/Tema6_maxima_verosimilitud_y_seleccion_de_models.pdf)
+- [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema5_maxima_verosimilitud/tema5_maxima_verosimilitud_y_seleccion_de_models.pdf)
 - práctica
-  - [tutorial phyml, comandos - html](https://vinuesa.github.io/TIB-filoinfo/sesion6_maxima_verosimilitud/)
-  - [tutorial phyml (secuencias), tgz](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion6_maxima_verosimilitud/phyml_tutorial_data.tgz)
-  - [tutorial jmodeltest (presentación) - pdf](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion6_maxima_verosimilitud/jmodeltest_tutorial.pdf)
-  - [tutorial jmodeltest (comandos y secuencias), tgz](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion6_maxima_verosimilitud/jmodeltest_tutorial.tgz)
+  - [tutorial phyml, comandos - html](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema5_maxima_verosimilitud/data/phyml_commands.html)
+  - [tutorial phyml (secuencias), tgz](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema5_maxima_verosimilitud/data/phyml_tutorial_data.tgz)
+  - [tutorial jmodeltest2 (presentación) - pdf](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema5_maxima_verosimilitud/Tutorial_uso_jModelTest2.pdf)
+  - [tutorial jmodeltest (comandos y secuencias), tgz](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema5_maxima_verosimilitud/data/jmodeltest_tutorial.tgz)
 - Lecturas recomendadas
   - Lefort V, Longueville JE, Gascuel O. SMS: Smart Model Selection in PhyML. [Mol Biol Evol. 2017 Sep 1;34(9):2422-2424](https://www.ncbi.nlm.nih.gov/pubmed/28472384)
   - Criscuolo A. morePhyML: improving the phylogenetic tree space exploration with PhyML 3. Mol [Phylogenet Evol. 2011 Dec;61(3):944-8](https://www.ncbi.nlm.nih.gov/pubmed/21925283)
   - Guindon S, Dufayard JF, Lefort V, Anisimova M, Hordijk W, Gascuel O. New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. [Syst Biol. 2010 May;59(3):307-21](https://www.ncbi.nlm.nih.gov/pubmed/20525638)
+  - Darriba D, Taboada GL, Doallo R, Posada D. jModelTest 2: more models, new heuristics and parallel computing. [Nat Methods. 2012 Jul 30;9(8):772. doi: 10.1038/nmeth.2109.](https://pubmed.ncbi.nlm.nih.gov/22847109/)
+  - Santorum JM, Darriba D, Taboada GL, Posada D. jmodeltest.org: selection of nucleotide substitution models on the cloud [Bioinformatics. 2014 May 1;30(9):1310-1. doi: 10.1093/bioinformatics/btu032](https://pubmed.ncbi.nlm.nih.gov/24451621/)
 
+<!--
 
+### Jueves de octubre de 2021
 #### <b>Inferencia bayesiana de filogenias (teoría y práctica)</b>
 - Lecturas recomendadas
   - Nascimento FF, Reis MD, Yang Z. A biologist's guide to Bayesian phylogenetic analysis. [Nat Ecol Evol. 2017 Oct;1(10):1446-1454](https://www.ncbi.nlm.nih.gov/pubmed/28983516)
