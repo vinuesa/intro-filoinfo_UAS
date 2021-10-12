@@ -134,16 +134,20 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
   - Darriba D, Taboada GL, Doallo R, Posada D. jModelTest 2: more models, new heuristics and parallel computing. [Nat Methods. 2012 Jul 30;9(8):772. doi: 10.1038/nmeth.2109.](https://pubmed.ncbi.nlm.nih.gov/22847109/)
   - Santorum JM, Darriba D, Taboada GL, Posada D. jmodeltest.org: selection of nucleotide substitution models on the cloud [Bioinformatics. 2014 May 1;30(9):1310-1. doi: 10.1093/bioinformatics/btu032](https://pubmed.ncbi.nlm.nih.gov/24451621/)
 
-<!--
+***
 
-### Jueves de octubre de 2021
+### Jueves 21 de octubre de 2021
 #### <b>Inferencia bayesiana de filogenias (teoría y práctica)</b>
+
+En construcción ...
+
 - Lecturas recomendadas
   - Nascimento FF, Reis MD, Yang Z. A biologist's guide to Bayesian phylogenetic analysis. [Nat Ecol Evol. 2017 Oct;1(10):1446-1454](https://www.ncbi.nlm.nih.gov/pubmed/28983516)
 
 
 
 ***
+<!--
 
 ### Jueves 1 de Agosto
 #### <b>Cómputo de familias de genes homólogos con datos genómicos usando GET_HOMOLOGUES(teoría)</b>
