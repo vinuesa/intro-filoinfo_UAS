@@ -110,21 +110,17 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 
 ***
 
-### Miércoles 31 de Julio
+### Sábado 16 de octubre de 2021
 
 #### <b>Sesión 4: Introducción a los métodos filogenéticos, modelos de sustitución y algoritmos de búsqueda de árboles</b>
 
-En construcción ...
-
-***
-
-<!-- 
-
-- [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion5_metodos_filogeneticos_y_modelos/Tema5_metodos_filogeneticos_y_modelos.pdf)
+- [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema4_metodos_filogeneticos_y_modelos/tema4_metodos_filogeneticos_y_modelos.pdf)
 - Lecturas recomendadas
   - Yang Z, Rannala B. Molecular phylogenetics: principles and practice. [Nat Rev Genet. 2012 Mar 28;13(5):303-14](https://www.ncbi.nlm.nih.gov/pubmed/22456349)
 
-#### <b>Sesión 6: Selección de modelos e inferencia de filogenias bajo máxima verosimilitud (teoría y práctica)</b>
+<!--
+
+#### <b>Sesión 5: Selección de modelos e inferencia de filogenias bajo máxima verosimilitud (teoría y práctica)</b>
 - [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion6_maxima_verosimilitud/Tema6_maxima_verosimilitud_y_seleccion_de_models.pdf)
 - práctica
   - [tutorial phyml, comandos - html](https://vinuesa.github.io/TIB-filoinfo/sesion6_maxima_verosimilitud/)
