@@ -148,19 +148,23 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 - Lecturas recomendadas
   - Nascimento FF, Reis MD, Yang Z. A biologist's guide to Bayesian phylogenetic analysis. [Nat Ecol Evol. 2017 Oct;1(10):1446-1454](https://www.ncbi.nlm.nih.gov/pubmed/28983516)
   - Höhna S, Landis MJ, Heath TA, Boussau B, Lartillot N, Moore BR, Huelsenbeck JP, Ronquist F. RevBayes: Bayesian Phylogenetic Inference Using Graphical Models and an Interactive Model-Specification Language. [Syst Biol. 2016 Jul;65(4):726-36. doi: 10.1093/sysbio/syw021.](https://pubmed.ncbi.nlm.nih.gov/27235697/)
+   - Höhna S, Landis MJ, Heath TA. Phylogenetic Inference Using RevBayes. [Curr Protoc Bioinformatics. 2017 May 2;57:6.16.1-6.16.34. doi: 10.1002/cpbi.22.](https://pubmed.ncbi.nlm.nih.gov/28463399/)
   - Harrington SM, Wishingrad V, Thomson RC. Properties of Markov Chain Monte Carlo Performance across Many Empirical Alignments. [Mol Biol Evol. 2021 Apr 13;38(4):1627-1640. doi: 10.1093/molbev/msaa295.](https://pubmed.ncbi.nlm.nih.gov/33185685/)
   - Bouckaert R, Vaughan TG, Barido-Sottani J, et al. BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. [PLoS Comput Biol. 2019 Apr 8;15(4):e1006650. doi: 10.1371/journal.pcbi.1006650. eCollection 2019 ](https://pubmed.ncbi.nlm.nih.gov/30958812/)
   - Barido-Sottani J, Bošková V, Plessis LD, Kühnert D, Magnus C, Mitov V, Müller NF, PecErska J, Rasmussen DA, Zhang C, Drummond AJ, Heath TA, Pybus OG, Vaughan TG, Stadler T. 
 Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol. 2018 Jan 1;67(1):170-174. doi: 10.1093/sysbio/syx060.](https://pubmed.ncbi.nlm.nih.gov/28673048/)
+ 
 
 ***
-<!--
+
 
 ### Viernes 22 de octubre de 2021
 
-#### <b>Cómputo de familias de genes homólogos con datos genómicos usando GET_HOMOLOGUES(teoría)</b>
+#### <b>Sesión 7: Cómputo de familias de genes homólogos con datos genómicos usando GET_HOMOLOGUES(teoría)</b>
 
 En construcción ... 
+
+<!--
 
 - [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion7_pangenomica_GET_HOMOLOGUES/pangenomica_microbiana_y_GET_HOMOLOGUES_TIB19.pdf)
 - [Análisis pangenómico con GET_HOMOLOGUES (código) - txt](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion7_pangenomica_GET_HOMOLOGUES/data/code4_GET_HOMOLOGUES_TIB19-T3.txt)
