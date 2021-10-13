@@ -137,14 +137,14 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 ***
 
 ### Jueves 21 de octubre de 2021
-#### <b>Inferencia bayesiana de filogenias (teoría y práctica)</b>
+#### <b>Sesión 6: Inferencia bayesiana de filogenias (teoría y práctica)</b>
 
 - [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/tema6_inferencia_bayesiana_de_filogenias_moleculares.pdf)
 - práctica
-  - [primates4bayes.nex](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/primates4bayes.nex)
-  - [run_MrBayes.cmd](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/run_MrBayes.cmd)
-  - [generation_plots.r](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/generation_plots.r)
-  - [how2run_R_script.txt](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/how2run_R_script.txt)
+  - [primates4bayes.nex](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/practica_mrbayes/primates4bayes.nex)
+  - [run_MrBayes.cmd](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/practica_mrbayes/run_MrBayes.cmd)
+  - [generation_plots.r](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/practica_mrbayes/generation_plots.r)
+  - [how2run_R_script.txt](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema6_inferencia_bayesiana_de_filogenias/practica_mrbayes/how2run_R_script.txt)
 - Lecturas recomendadas
   - Nascimento FF, Reis MD, Yang Z. A biologist's guide to Bayesian phylogenetic analysis. [Nat Ecol Evol. 2017 Oct;1(10):1446-1454](https://www.ncbi.nlm.nih.gov/pubmed/28983516)
   - Höhna S, Landis MJ, Heath TA, Boussau B, Lartillot N, Moore BR, Huelsenbeck JP, Ronquist F. RevBayes: Bayesian Phylogenetic Inference Using Graphical Models and an Interactive Model-Specification Language. [Syst Biol. 2016 Jul;65(4):726-36. doi: 10.1093/sysbio/syw021.](https://pubmed.ncbi.nlm.nih.gov/27235697/)
