@@ -1,0 +1,3 @@
+1) R --no-save < generation_plots.r
+
+2) cat generation_plots.r | R --no-save
