@@ -153,6 +153,7 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
   - Bouckaert R, Vaughan TG, Barido-Sottani J, et al. BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. [PLoS Comput Biol. 2019 Apr 8;15(4):e1006650. doi: 10.1371/journal.pcbi.1006650. eCollection 2019 ](https://pubmed.ncbi.nlm.nih.gov/30958812/)
   - Barido-Sottani J, Bošková V, Plessis LD, Kühnert D, Magnus C, Mitov V, Müller NF, PecErska J, Rasmussen DA, Zhang C, Drummond AJ, Heath TA, Pybus OG, Vaughan TG, Stadler T. 
 Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol. 2018 Jan 1;67(1):170-174. doi: 10.1093/sysbio/syx060.](https://pubmed.ncbi.nlm.nih.gov/28673048/)
+  - Ochoa-Sánchez LE, Vinuesa P. Evolutionary Genetic Analysis Uncovers Multiple Species with Distinct Habitat Preferences and Antibiotic Resistance Phenotypes in the Stenotrophomonas maltophilia Complex. [Front Microbiol. 2017 Aug 17;8:1548. doi: 10.3389/fmicb.2017.01548. eCollection 2017.](https://pubmed.ncbi.nlm.nih.gov/28861062/)
  
 
 ***
@@ -160,15 +161,9 @@ Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol.
 
 ### Viernes 22 de octubre de 2021
 
-#### <b>Sesión 7: Cómputo de familias de genes homólogos con datos genómicos usando GET_HOMOLOGUES(teoría)</b>
+#### <b>Sesión 7: Cómputo de familias de genes homólogos con datos genómicos usando GET_HOMOLOGUES (teoría)</b>
 
 En construcción ... 
-
-<!--
-
-- [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion7_pangenomica_GET_HOMOLOGUES/pangenomica_microbiana_y_GET_HOMOLOGUES_TIB19.pdf)
-- [Análisis pangenómico con GET_HOMOLOGUES (código) - txt](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion7_pangenomica_GET_HOMOLOGUES/data/code4_GET_HOMOLOGUES_TIB19-T3.txt)
-- [Análisis pangenómico con GET_HOMOLOGUES (secuencias) - tgz](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion7_pangenomica_GET_HOMOLOGUES/data/pIncAC.tgz)
 
 - Lecturas recomendadas
   - Medini D, Donati C, Tettelin H, Masignani V, Rappuoli R. The microbial pan-genome. [Curr Opin Genet Dev. 2005 Dec;15(6):589-94](https://www.ncbi.nlm.nih.gov/pubmed/16185861)
@@ -178,18 +173,18 @@ En construcción ...
 
 ***
 
-### Viernes 2 de Agosto
-#### <b>Estrategias para la estima de filogenias genómicas</b>
-- [presentación - PDF](https://github.com/vinuesa/TIB-filoinfo/tree/master/docs/sesion8_filogenomica_GET_PHYLOMARKERS/get_phylomarkers_overview_TIB2019-T3.pdf)
-- [tutorial - html](https://github.com/vinuesa/get_phylomarkers/blob/master/docs/GET_PHYLOMARKERS_manual.md#get_phylomarkers-tutorial)
-#### <b>Estima de filogenias genómicas con GET_PHYLOMARKERS (prácticas)</b>
+### Sábado 23 de octubre de 2021
+
+#### <b>Sesión 8: Introducción a la filogenómica microbiana con GET_PHYLOMARKERS (teoría)</b>
+
+En construcción ... 
+
 - Lecturas recomendadas
   - Vinuesa P, Ochoa-Sánchez LE, Contreras-Moreira B. GET_PHYLOMARKERS, a Software Package to Select Optimal Orthologous Clusters for Phylogenomics and Inferring Pan-Genome Phylogenies, Used for a Critical Geno-Taxonomic Revision of the Genus Stenotrophomonas. [Front Microbiol. 2018 May 1;9:771](https://www.frontiersin.org/articles/10.3389/fmicb.2018.00771/full)
 
+***
 
 #### <b>Pangenómica y evolución de patógenos oportunistas multidrogo-resistentes (seminario integrativo de investigación)</b>
-
--->
 
 
 ***
