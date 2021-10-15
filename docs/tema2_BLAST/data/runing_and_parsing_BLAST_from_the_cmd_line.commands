@@ -57,7 +57,7 @@ mv gene_discovery_and_annotation_using_blastx.tgz BLAST_DB_AA
 # AIM:
 # classify novel 16S rDNA sequences using the single best blast hit
 # Query sequences in file: 16S_problema.fna
-# Reference sequences to build a blastn-searchable DB: 6S_seqs4_blastDB.fna
+# Reference sequences to build a blastn-searchable DB: 16S_seqs4_blastDB.fna
 #
 # We will also explore each of these files using standard shell filtering tools
 # and modify the FASTA headers to make them suitable for formatdb|makeblastdb indexing
