@@ -100,7 +100,7 @@ head 16S_problema_blastN_maln1_m6.tab
 cut -f 2 16S_problema_blastN_maln1_m6.tab | sort | uniq -c
 
 # 3) retrieve all hits from the db using fastacmd
-cut -f2 16S_problema_blastN_maln1_m6.tab  > IDs4fastacmd.txt
+cut -f2 16S_problema_blastN_maln1_m6.tab > IDs4fastacmd.txt
 
 #blastdbcmd -i IDs4fastacmd.txt -d 16S_seqs4_blastDB.fnaed | grep '>' |cut -d\| -f3 | cut -d' ' -f2 > hit_sequences_b1.fna
 blastdbcmd -entry_batch IDs4fastacmd.txt -db 16S_seqs4_blastDB.fnaed > best-hit_sequences.fna
@@ -225,7 +225,7 @@ cat blastp_10hits.tsv
 
 # filter out only hits with qcov >= 97%
 sed 's/\t/\n/g' header1.tab | cat -n
-awk 'BEGIN{FS="\t"; OFS="\t"} $17 >= 97' blastp_10hits.tsv 
+awk 'BEGIN{FS="\t"; OFS="\t"} $16 >= 97' blastp_10hits.tsv 
 
 # lets add a subject title (stitle), to get the description line of the proteins we are finding as top hits
 echo -e 'qseqid\tsseqid\tqlen\tslen\tstitle\tlength\tpident\tpositive\tmismatch\tgaps\tevalue\tbitscore\tqcovs' > header1.tab
