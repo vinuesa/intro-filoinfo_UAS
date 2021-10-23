@@ -11,7 +11,7 @@
 
 <meta name="author" content="Pablo Vinuesa, CCG-UNAM (https://www.ccg.unam.mx/~vinuesa/); @pvinmex" />
 
-<meta name="date" content="2021-10-22" />
+<meta name="date" content="2021-10-23" />
 
 <title>Pangenomic and phylogenomic analyses of pIncC plasmids using GET_HOMOLOGUES and GET_PHYLOMARKERS</title>
 
@@ -351,7 +351,7 @@ pre code {
 
 <h1 class="title toc-ignore">Pangenomic and phylogenomic analyses of pIncC plasmids using GET_HOMOLOGUES and GET_PHYLOMARKERS</h1>
 <h4 class="author">Pablo Vinuesa, CCG-UNAM (<a href="https://www.ccg.unam.mx/~vinuesa/" class="uri">https://www.ccg.unam.mx/~vinuesa/</a>); <span class="citation">@pvinmex</span></h4>
-<h4 class="date">2021-10-22</h4>
+<h4 class="date">2021-10-23</h4>
 
 </div>
 
@@ -366,7 +366,9 @@ pre code {
 </ul></li>
 <li><a href="#get_homologues-tutorial-computing-core--and-pan-genomes"><span class="toc-section-number">3</span> GET_HOMOLOGUES tutorial: computing core- and pan-genomes</a><ul>
 <li><a href="#get_homologues-options"><span class="toc-section-number">3.1</span> GET_HOMOLOGUES options</a><ul>
-<li><a href="#checking-that-all-dependencies-are-in-place"><span class="toc-section-number">3.1.1</span> Checking that all dependencies are in place</a></li>
+<li><a href="#checking-that-all-dependencies-are-in-place"><span class="toc-section-number">3.1.1</span> Checking that all dependencies are in place</a><ul>
+<li><a href="#what-if-the-get_homologues.pl-is-not-in-path-adding-the-get_homologues-directory-holding-the-distribution-to-the-path-variable"><span class="toc-section-number">3.1.1.1</span> What if the get_homologues.pl is not in PATH? Adding the get_homologues directory (holding the distribution) to the PATH variable</a></li>
+</ul></li>
 <li><a href="#running-the-main-script-get_homologues.pl"><span class="toc-section-number">3.1.2</span> Running the main <span class="math inline">\(script\)</span> <em>get_homologues.pl</em></a></li>
 </ul></li>
 <li><a href="#running-get_homologues-with-different-clustering-algorithms-to-compute-consensus-core--and-pan-genomes"><span class="toc-section-number">3.2</span> Running GET_HOMOLOGUES with different clustering algorithms to compute consensus core- and pan-genomes</a><ul>
@@ -486,11 +488,11 @@ mkdir pangenomics &amp;&amp; cd pangenomics
 top_dir=$(pwd)
 echo $top_dir
 
-data_dir=&quot;/path/to/data_dir&quot;
+# now downoad the pIncAC.tgz from the GitHub repo into the pangenomics dir and untar it
+tar -xzf pIncAC.tgz
 
-# make a new subdirectory, that will hold the symlinks to the gbk data
-mkdir pIncAC &amp;&amp; cd pIncAC
-ln -s $data_dir/*.gbk .
+# explore the pIncAC directory, which contains the 12 GenBank files we will use throughout this tutorial
+cd pIncAC
 
 # list files
 ls -l
@@ -578,6 +580,19 @@ Checking required binaries and data sources, all set in phyTools.pm :
          EXE_HOMOL : OK (path:/export/apps/get_homologues-x86_64-20200226/_cluster_makeHomolog.pl)
     EXE_SPLITBLAST : OK (path:/export/apps/get_homologues-x86_64-20200226/_split_blast.pl)
   EXE_SPLITHMMPFAM : OK (path:/export/apps/get_homologues-x86_64-20200226/_split_hmmscan.pl)</code></pre>
+<div id="what-if-the-get_homologues.pl-is-not-in-path-adding-the-get_homologues-directory-holding-the-distribution-to-the-path-variable" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> What if the get_homologues.pl is not in PATH? Adding the get_homologues directory (holding the distribution) to the PATH variable</h4>
+<p>The <a href="https://github.com/eead-csic-compbio/get_homologues/releases">latest get_homologues release</a> was downloaded by the administrator and unpacked in your <span class="math inline">\(\$HOME\)</span> directory as the <span class="math inline">\(get\_homologues\)</span> folder. You need to add the <span class="math inline">\(path\)</span> to that folder to your <span class="math inline">\(.bashrc\)</span> file, located in your home directory.</p>
+<pre><code># cd into your home directory and add the get_homologues directory to PATH as follows
+cd
+
+# open the .bashrc file with your text editor (vim, nano) and add the following line at the end file
+PATH=$PATH:$HOME/get_homologues
+
+# save the .bashrc file and source it in
+source .bashrc</code></pre>
+<p>Now the <code>get_homologues.pl</code> command should be responding, as shown above.</p>
+</div>
 </div>
 <div id="running-the-main-script-get_homologues.pl" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Running the main <span class="math inline">\(script\)</span> <em>get_homologues.pl</em></h3>
