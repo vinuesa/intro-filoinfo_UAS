@@ -166,7 +166,7 @@ Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol.
 - [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/Pangen%C3%B3mica_y_Filogen%C3%B3mica_microbiana_UAS_23oct21.pdf)
 - práctica
   - [tutorial GET_HOMOLOGUES + GET_PHYLOMARKERS, comandos - html](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/pangenomics_and_phylogenomics_of_pIncACs.html)
-  - [datos - tgz de 12 archivo GenBank de plásmidos pIncC](intro-filoinfo_UAS/docs/tema7_pangenomica_GET_HOMOLOGUES/test_sequences/pIncAC.tgz)
+  - [datos - tgz de 12 archivo GenBank de plásmidos pIncC](https://github.com/vinuesa/intro-filoinfo_UAS/docs/tema7_pangenomica_GET_HOMOLOGUES/test_sequences/pIncAC.tgz)
 - Lecturas recomendadas
   - Contreras-Moreira B, Vinuesa P. GET_HOMOLOGUES, a versatile software package for scalable and robust microbial pangenome analysis. [Appl Environ Microbiol. 2013 Dec;79(24):7696-701](https://www.ncbi.nlm.nih.gov/pubmed/24096415)
   - Freschi L, Vincent AT, Jeukens J, Emond-Rheault JG, Kukavica-Ibrulj I, Dupont MJ, Charette SJ, Boyle B, Levesque RC. The Pseudomonas aeruginosa Pan-Genome Provides New Insights on Its Population Structure, Horizontal Gene Transfer, and Pathogenicity. [Genome Biol Evol. 2019 Jan 1;11(1):109-120](https://www.ncbi.nlm.nih.gov/pubmed/30496396)
@@ -185,7 +185,7 @@ Different evolutionary trends form the twilight zone of the bacterial pan-genome
 - [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/Pangen%C3%B3mica_y_Filogen%C3%B3mica_microbiana_UAS_23oct21.pdf)
 - práctica
   - [tutorial GET_HOMOLOGUES + GET_PHYLOMARKERS, comandos - html](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/pangenomics_and_phylogenomics_of_pIncACs.html)
-  - [datos - tgz de 12 archivo GenBank de plásmidos pIncC](intro-filoinfo_UAS/docs/tema7_pangenomica_GET_HOMOLOGUES/test_sequences/pIncAC.tgz)
+  - [datos - tgz de 12 archivo GenBank de plásmidos pIncC](https://github.com/vinuesa/intro-filoinfo_UAS/docs/tema7_pangenomica_GET_HOMOLOGUES/test_sequences/pIncAC.tgz)
 - Lecturas recomendadas
   - Whelan FJ, Hall RJ, McInerney JO. Evidence for Selection in the Abundant Accessory Gene Content of a Prokaryote Pangenome. [Mol Biol Evol. 2021 Aug 23;38(9):3697-3708. doi: 10.1093/molbev/msab139.](https://pubmed.ncbi.nlm.nih.gov/33963386/)
 - Vinuesa P, Ochoa-Sánchez LE, Contreras-Moreira B. GET_PHYLOMARKERS, a Software Package to Select Optimal Orthologous Clusters for Phylogenomics and Inferring Pan-Genome Phylogenies, Used for a Critical Geno-Taxonomic Revision of the Genus Stenotrophomonas. [Front Microbiol. 2018 May 1;9:771](https://www.frontiersin.org/articles/10.3389/fmicb.2018.00771/full)
