@@ -51,7 +51,7 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
 
    <code>git clone https://github.com/vinuesa/intro-filoinfo_UAS.git</code>
 
-- Para actualizar el repositorio, ejecuta este comando desde dentro del directorio TIBS-filoinfo
+- Para actualizar el repositorio, ejecuta este comando desde el directorio en el que quieras almacenarlo
   
    <code>git pull https://github.com/vinuesa/intro-filoinfo_UAS.git</code>
 
@@ -163,29 +163,32 @@ Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol.
 
 #### <b>Sesión 7: Cómputo de familias de genes homólogos con datos genómicos usando GET_HOMOLOGUES (teoría)</b>
 
-En construcción ... 
-
+- [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/Pangen%C3%B3mica_y_Filogen%C3%B3mica_microbiana_UAS_23oct21.pdf)
+- práctica
+  - [tutorial GET_HOMOLOGUES + GET_PHYLOMARKERS, comandos - html](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/pangenomics_and_phylogenomics_of_pIncACs.html)
+  - [datos - tgz de 12 archivo GenBank de plásmidos pIncC](intro-filoinfo_UAS/docs/tema7_pangenomica_GET_HOMOLOGUES/test_sequences/pIncAC.tgz)
 - Lecturas recomendadas
-  - Medini D, Donati C, Tettelin H, Masignani V, Rappuoli R. The microbial pan-genome. [Curr Opin Genet Dev. 2005 Dec;15(6):589-94](https://www.ncbi.nlm.nih.gov/pubmed/16185861)
   - Contreras-Moreira B, Vinuesa P. GET_HOMOLOGUES, a versatile software package for scalable and robust microbial pangenome analysis. [Appl Environ Microbiol. 2013 Dec;79(24):7696-701](https://www.ncbi.nlm.nih.gov/pubmed/24096415)
-  - Vinuesa P, Contreras-Moreira B. Robust identification of orthologues and paralogues for microbial pan-genomics using GET_HOMOLOGUES: a case study of pIncA/C plasmids. [Methods Mol Biol. 2015;1231:203-32](https://www.ncbi.nlm.nih.gov/pubmed/25343868)
   - Freschi L, Vincent AT, Jeukens J, Emond-Rheault JG, Kukavica-Ibrulj I, Dupont MJ, Charette SJ, Boyle B, Levesque RC. The Pseudomonas aeruginosa Pan-Genome Provides New Insights on Its Population Structure, Horizontal Gene Transfer, and Pathogenicity. [Genome Biol Evol. 2019 Jan 1;11(1):109-120](https://www.ncbi.nlm.nih.gov/pubmed/30496396)
+  - Horesh G, Taylor-Brown A, McGimpsey S, Lassalle F, Corander J, Heinz E, Thomson NR. 
+Different evolutionary trends form the twilight zone of the bacterial pan-genome. [Microb Genom. 2021 Sep;7(9). doi: 10.1099/mgen.0.000670.](https://pubmed.ncbi.nlm.nih.gov/34559043/)
+  - McInerney JO, McNally A, O'Connell MJ. Why prokaryotes have pangenomes. [Nat Microbiol. 2017 Dec;2(12):1575. doi: 10.1038/s41564-017-0068-4](https://pubmed.ncbi.nlm.nih.gov/28350002/)
+  - Medini D, Donati C, Tettelin H, Masignani V, Rappuoli R. The microbial pan-genome. [Curr Opin Genet Dev. 2005 Dec;15(6):589-94](https://www.ncbi.nlm.nih.gov/pubmed/16185861)
+  - Vinuesa P, Contreras-Moreira B. Robust identification of orthologues and paralogues for microbial pan-genomics using GET_HOMOLOGUES: a case study of pIncA/C plasmids. [Methods Mol Biol. 2015;1231:203-32](https://www.ncbi.nlm.nih.gov/pubmed/25343868)
+  
 
 ***
 
 ### Sábado 23 de octubre de 2021
 
 #### <b>Sesión 8: Introducción a la filogenómica microbiana con GET_PHYLOMARKERS (teoría)</b>
-
-En construcción ... 
-
+- [presentación - PDF](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/Pangen%C3%B3mica_y_Filogen%C3%B3mica_microbiana_UAS_23oct21.pdf)
+- práctica
+  - [tutorial GET_HOMOLOGUES + GET_PHYLOMARKERS, comandos - html](https://github.com/vinuesa/intro-filoinfo_UAS/blob/main/docs/tema7_pangenomica_GET_HOMOLOGUES/pangenomics_and_phylogenomics_of_pIncACs.html)
+  - [datos - tgz de 12 archivo GenBank de plásmidos pIncC](intro-filoinfo_UAS/docs/tema7_pangenomica_GET_HOMOLOGUES/test_sequences/pIncAC.tgz)
 - Lecturas recomendadas
-  - Vinuesa P, Ochoa-Sánchez LE, Contreras-Moreira B. GET_PHYLOMARKERS, a Software Package to Select Optimal Orthologous Clusters for Phylogenomics and Inferring Pan-Genome Phylogenies, Used for a Critical Geno-Taxonomic Revision of the Genus Stenotrophomonas. [Front Microbiol. 2018 May 1;9:771](https://www.frontiersin.org/articles/10.3389/fmicb.2018.00771/full)
-
-***
-
-#### <b>Pangenómica y evolución de patógenos oportunistas multidrogo-resistentes (seminario integrativo de investigación)</b>
-
+  - Whelan FJ, Hall RJ, McInerney JO. Evidence for Selection in the Abundant Accessory Gene Content of a Prokaryote Pangenome. [Mol Biol Evol. 2021 Aug 23;38(9):3697-3708. doi: 10.1093/molbev/msab139.](https://pubmed.ncbi.nlm.nih.gov/33963386/)
+- Vinuesa P, Ochoa-Sánchez LE, Contreras-Moreira B. GET_PHYLOMARKERS, a Software Package to Select Optimal Orthologous Clusters for Phylogenomics and Inferring Pan-Genome Phylogenies, Used for a Critical Geno-Taxonomic Revision of the Genus Stenotrophomonas. [Front Microbiol. 2018 May 1;9:771](https://www.frontiersin.org/articles/10.3389/fmicb.2018.00771/full)
 
 ***
 
@@ -194,6 +197,7 @@ En construcción ...
 - [clustal omega](http://www.clustal.org/omega/)
 - [seaview](http://doua.prabi.fr/software/seaview)
 - [PhyML](https://github.com/stephaneguindon/phyml)
+- [jModelTest2](https://github.com/ddarriba/jmodeltest2)
 - [MrBayes](https://nbisweden.github.io/MrBayes/download.html)
 - [FigTree](https://github.com/rambaut/figtree/releases/tag/v1.4.4)
 - [GET_HOMOLOGUES](https://github.com/eead-csic-compbio/get_homologues/releases)
