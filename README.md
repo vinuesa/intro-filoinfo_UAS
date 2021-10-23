@@ -172,8 +172,10 @@ Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol.
   - Horesh G, Taylor-Brown A, McGimpsey S, Lassalle F, Corander J, Heinz E, Thomson NR. 
 Different evolutionary trends form the twilight zone of the bacterial pan-genome. [Microb Genom. 2021 Sep;7(9). doi: 10.1099/mgen.0.000670.](https://pubmed.ncbi.nlm.nih.gov/34559043/)
   - Kristensen DM, Wolf YI, Mushegian AR, Koonin EV. [Computational methods for Gene Orthology inference. Brief Bioinform. 2011 Sep;12(5):379-91. doi: 10.1093/bib/bbr030](https://pubmed.ncbi.nlm.nih.gov/21690100/)
+  - Lei L, Goltsman E, Goodstein D, Wu GA, Rokhsar DS, Vogel JP. Plant Pan-Genomics Comes of Age. [Annu Rev Plant Biol. 2021 Jun 17;72:411-435. doi: 10.1146/annurev-arplant-080720-105454](https://pubmed.ncbi.nlm.nih.gov/33848428/)
   - McInerney JO, McNally A, O'Connell MJ. Why prokaryotes have pangenomes. [Nat Microbiol. 2017 Dec;2(12):1575. doi: 10.1038/s41564-017-0068-4](https://pubmed.ncbi.nlm.nih.gov/28350002/)
   - Medini D, Donati C, Tettelin H, Masignani V, Rappuoli R. The microbial pan-genome. [Curr Opin Genet Dev. 2005 Dec;15(6):589-94](https://www.ncbi.nlm.nih.gov/pubmed/16185861)
+  - Sherman RM, Salzberg SL. Pan-genomics in the human genome era. [Nat Rev Genet. 2020 Apr;21(4):243-254. doi: 10.1038/s41576-020-0210-7](https://pubmed.ncbi.nlm.nih.gov/32034321/)
   - Vinuesa P, Contreras-Moreira B. Robust identification of orthologues and paralogues for microbial pan-genomics using GET_HOMOLOGUES: a case study of pIncA/C plasmids. [Methods Mol Biol. 2015;1231:203-32](https://www.ncbi.nlm.nih.gov/pubmed/25343868)
   
 
