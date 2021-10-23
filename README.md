@@ -3,7 +3,7 @@
 <img src="docs/pics/TIB19-T3_foto_de_grupo1.png" alt="TIB2019-T3 foto de grupo" width="400" height="300" align="middle"> -->
 
 # intro-filoinfo_UAS
-Repositorio de material didáctico de filoinformática y pan-genómica microbiana para Diplomado en Bioinformática UAS, México
+Repositorio de material didáctico de filoinformática y pan-genómica microbiana para [Diplomado en Bioinformática UAS-2021, México](https://fic.uas.edu.mx/diplomado-en-bioinformatica/)
 
 ### Sobre el repositorio
 Este repositorio contiene el material para el [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbianos: Pangen&oacute;mica y filoinform&aacute;tica](https://github.com/vinuesa/intro-filoinfo_UAS) del [Diplomado en Bioinformática 2021 - Universidad Autónoma de Sinaloa, México](http://econtinua.uas.edu.mx/diplomados/2510-2700-18_001.htm).
