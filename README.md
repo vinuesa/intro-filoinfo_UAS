@@ -154,10 +154,8 @@ El material del [M&oacute;dulo de An&aacute;lisis comparativo de genomas microbi
   - Barido-Sottani J, Bošková V, Plessis LD, Kühnert D, Magnus C, Mitov V, Müller NF, PecErska J, Rasmussen DA, Zhang C, Drummond AJ, Heath TA, Pybus OG, Vaughan TG, Stadler T. 
 Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol. 2018 Jan 1;67(1):170-174. doi: 10.1093/sysbio/syx060.](https://pubmed.ncbi.nlm.nih.gov/28673048/)
   - Ochoa-Sánchez LE, Vinuesa P. Evolutionary Genetic Analysis Uncovers Multiple Species with Distinct Habitat Preferences and Antibiotic Resistance Phenotypes in the Stenotrophomonas maltophilia Complex. [Front Microbiol. 2017 Aug 17;8:1548. doi: 10.3389/fmicb.2017.01548. eCollection 2017.](https://pubmed.ncbi.nlm.nih.gov/28861062/)
- 
 
 ***
-
 
 ### Viernes 22 de octubre de 2021
 
@@ -170,8 +168,10 @@ Taming the BEAST-A Community Teaching Material Resource for BEAST 2. [Syst Biol.
 - Lecturas recomendadas
   - Contreras-Moreira B, Vinuesa P. GET_HOMOLOGUES, a versatile software package for scalable and robust microbial pangenome analysis. [Appl Environ Microbiol. 2013 Dec;79(24):7696-701](https://www.ncbi.nlm.nih.gov/pubmed/24096415)
   - Freschi L, Vincent AT, Jeukens J, Emond-Rheault JG, Kukavica-Ibrulj I, Dupont MJ, Charette SJ, Boyle B, Levesque RC. The Pseudomonas aeruginosa Pan-Genome Provides New Insights on Its Population Structure, Horizontal Gene Transfer, and Pathogenicity. [Genome Biol Evol. 2019 Jan 1;11(1):109-120](https://www.ncbi.nlm.nih.gov/pubmed/30496396)
+  - Golicz AA, Bayer PE, Bhalla PL, Batley J, Edwards D. Pangenomics Comes of Age: From Bacteria to Plant and Animal Applications. [Trends Genet. 2020 Feb;36(2):132-145. doi: 10.1016/j.tig.2019.11.006](https://pubmed.ncbi.nlm.nih.gov/31882191/)
   - Horesh G, Taylor-Brown A, McGimpsey S, Lassalle F, Corander J, Heinz E, Thomson NR. 
 Different evolutionary trends form the twilight zone of the bacterial pan-genome. [Microb Genom. 2021 Sep;7(9). doi: 10.1099/mgen.0.000670.](https://pubmed.ncbi.nlm.nih.gov/34559043/)
+  - Kristensen DM, Wolf YI, Mushegian AR, Koonin EV. [Computational methods for Gene Orthology inference. Brief Bioinform. 2011 Sep;12(5):379-91. doi: 10.1093/bib/bbr030](https://pubmed.ncbi.nlm.nih.gov/21690100/)
   - McInerney JO, McNally A, O'Connell MJ. Why prokaryotes have pangenomes. [Nat Microbiol. 2017 Dec;2(12):1575. doi: 10.1038/s41564-017-0068-4](https://pubmed.ncbi.nlm.nih.gov/28350002/)
   - Medini D, Donati C, Tettelin H, Masignani V, Rappuoli R. The microbial pan-genome. [Curr Opin Genet Dev. 2005 Dec;15(6):589-94](https://www.ncbi.nlm.nih.gov/pubmed/16185861)
   - Vinuesa P, Contreras-Moreira B. Robust identification of orthologues and paralogues for microbial pan-genomics using GET_HOMOLOGUES: a case study of pIncA/C plasmids. [Methods Mol Biol. 2015;1231:203-32](https://www.ncbi.nlm.nih.gov/pubmed/25343868)
