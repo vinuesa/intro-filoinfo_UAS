@@ -1,5 +1,5 @@
 ## >>> TIB2019-T3, CCG-UNAM: 29 Jul - 2 Ago 2019 <<<
-## NOTES: V8, Oct 9, 2021. Adapted for Diplomado en Bioinformatica - UAS 
+## NOTES: V8.1, Oct 25, 2021. Adapted for Diplomado en Bioinformatica - UAS 
 ## http://econtinua.uas.edu.mx/diplomados/2510-2700-18_001.htm
 ## https://github.com/vinuesa/intro-filoinfo_UAS
 
@@ -87,6 +87,10 @@ perl -pe 'if( /^>/ ){ $c++; s/>/>gnl|16S_DB|$c / }' 16S_seqs4_blastDB.fna > 16S_
 
 ## 2) run formatdb, generating an indexed DB
 #formatdb -i 16S_seqs4_blastDB.fnaed -p F -o T
+
+makeblastdb -h
+makeblastdb -help
+
 makeblastdb -in 16S_seqs4_blastDB.fnaed -dbtype nucl -parse_seqids
 
 # 2.1) run blastn (blastall -p blastn), and get only the best hit (-b 1) in tabular format (-m 8).
@@ -95,6 +99,32 @@ blastn -query 16S_problema.fna -db 16S_seqs4_blastDB.fnaed -outfmt 6 -num_alignm
 
 # 2.2) explore the table structure
 head 16S_problema_blastN_maln1_m6.tab
+
+
+#=====================================================================================
+# >>>         The default m6 blast output contains the following 12 fields         <<<     
+# qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore
+#-------------------------------------------------------------------------------------
+# 1. 	 qseqid 	 query (e.g., gene) sequence id
+# 2. 	 sseqid 	 subject (e.g., reference genome) sequence id
+# 3. 	 pident 	 percentage of identical matches
+# 4. 	 length 	 alignment length
+# 5. 	 mismatch 	 number of mismatches
+# 6. 	 gapopen 	 number of gap openings
+# 7. 	 qstart 	 start of alignment in query
+# 8. 	 qend 	 	 end of alignment in query
+# 9. 	 sstart 	 start of alignment in subject
+#10. 	 send 	 	 end of alignment in subject
+#11. 	 evalue 	 expect value
+#12. 	 bitscore 	 bit score
+#-------------------------------------------------------------------------------------
+
+# The default m6 blast output fields; print to file and append to 16S_problema_blastN_maln1_m6.tab
+echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" > standard_blast_fields.tsvŧ�ŧ
+cat standard_blast_fields.tsv 16S_problema_blastN_maln1_m6.tab > t && mv t 16S_problema_blastN_maln1_m6.tab
+
+head -20 16S_problema_blastN_maln1_m6.tab | column -t
+
 
 # 2.3) how many unique hits are there?
 cut -f 2 16S_problema_blastN_maln1_m6.tab | sort | uniq -c
